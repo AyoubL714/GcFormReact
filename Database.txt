@@ -1,0 +1,106 @@
+CREATE TABLE `fpagent` (
+  `matricule` int(11) NOT NULL,
+  `nomagent` varchar(50) DEFAULT NULL,
+  `prenagent` varchar(50) DEFAULT NULL,
+  `nomagentarabe` varchar(50) DEFAULT NULL,
+  `prenagentarabe` varchar(50) DEFAULT NULL,
+  `cin` int(11) DEFAULT NULL,
+  `natagent` varchar(50) DEFAULT NULL,
+  `datenaiss` date DEFAULT NULL,
+  `dateaffic` date DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `adragent` varchar(50) DEFAULT NULL,
+  `adragentarabe` varchar(50) DEFAULT NULL,
+  `sexe` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fpconge`
+--
+
+CREATE TABLE `fpconge` (
+  `matricule` int(11) NOT NULL,
+  `datedeb` date DEFAULT NULL,
+  `datefin` date DEFAULT NULL,
+  `dateretour` date DEFAULT NULL,
+  `nbrjours` int(11) DEFAULT NULL,
+  `relica` int(11) DEFAULT NULL,
+  `iddec` int(11) DEFAULT NULL,
+  `codtcng` int(11) DEFAULT NULL,
+  `adrcng` varchar(60) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fpdecision`
+--
+
+CREATE TABLE `fpdecision` (
+  `iddec` int(11) NOT NULL,
+  `datedec` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fpfonction`
+--
+
+CREATE TABLE `fpfonction` (
+  `codefct` int(11) NOT NULL,
+  `libfct` varchar(50) DEFAULT NULL,
+  `libfctarab` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fpgrade`
+--
+
+CREATE TABLE `fpgrade` (
+  `codegrad` int(11) NOT NULL,
+  `libgrad` varchar(50) DEFAULT NULL,
+  `libgradarabe` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fpservice`
+--
+
+CREATE TABLE `fpservice` (
+  `codeserv` int(11) NOT NULL,
+  `nomserv` varchar(50) DEFAULT NULL,
+  `nomservarabe` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fptypecng`
+--
+
+CREATE TABLE `fptypecng` (
+  `codetcng` int(11) NOT NULL,
+  `nomtcng` varchar(50) DEFAULT NULL,
+  `nomtcngarabe` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `login` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `nom` varchar(50) DEFAULT NULL,
+  `prenom` varchar(50) DEFAULT NULL,
+  `profil` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
